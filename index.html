@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synergetics Operating System (SOS) | Official Research &amp; Architecture Initiative</title>
+    <meta name="description" content="Official research, architecture, prototype, and founder website for the Synergetics Operating System (SOS) — an experimental operating-system architecture founded by Solomon Yaw Adeklo, exploring topology-based modeling and adaptive resource scheduling." />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Synergetics Operating System (SOS) | Official Website" />
+    <meta property="og:description" content="Exploring geometric relationships, topology-based modeling, and adaptive resource management in operating-system architecture." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo-synergetics.png" />
+    
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Synergetics Operating System (SOS)" />
+    <meta name="twitter:description" content="An experimental open-source research initiative exploring relationship-aware computing architecture." />
+    <meta name="twitter:image" content="assets/logo-synergetics.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-synergetics.png" />
+
+    <!-- Pure CSS3 Stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Site Header & Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="container header-container">
+        <a href="#home" class="brand-link" aria-label="Synergetics Operating System Home">
+          <img src="assets/logo-synergetics.png" alt="Synergetics OS Logo" class="brand-logo-img" />
+          <span class="brand-text">
+            <span class="part-synergetic">Synergetic</span><span class="part-os">OS</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#why-sos" class="nav-link">Why SOS?</a></li>
+            <li><a href="#synergetics" class="nav-link">Synergetics</a></li>
+            <li><a href="#architecture" class="nav-link">Architecture</a></li>
+            <li><a href="#simulation" class="nav-link">Scheduler</a></li>
+            <li><a href="#prototype" class="nav-link">Prototype</a></li>
+            <li><a href="#ui-ux" class="nav-link">UI/UX</a></li>
+            <li><a href="#founder" class="nav-link">Founder</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+            <li><a href="#contribute" class="nav-link">Contribute</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill" aria-label="Explore SOS on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>Explore on GitHub</span>
+          </a>
+
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="icon-close" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="hero-eyebrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 22 22 22"></polygon></svg>
+              AN OPEN-SOURCE OPERATING SYSTEM RESEARCH INITIATIVE
+            </span>
+            <h1 class="hero-heading">Rethinking Operating System Architecture Through Synergetics</h1>
+            <p class="hero-description">
+              The Synergetics Operating System (SOS) is an experimental research and development initiative exploring how geometric relationships, topology-based models, adaptive resource management, and emergent optimization might inform a different approach to operating-system architecture.
+            </p>
+            <p class="hero-description-secondary">
+              Inspired by Buckminster Fuller's Synergetics, SOS investigates how relationships among processes, computational resources, and system components could be modeled to support adaptive coordination and resource-aware scheduling.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#architecture" class="btn btn-primary btn-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                <span>Explore the Architecture &rarr;</span>
+              </a>
+              <a href="https://github.com/synergetic-os/Prototype" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>&lt;/&gt; View the Prototype &rarr;</span>
+              </a>
+              <a href="#research" class="btn btn-secondary btn-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Read the Research</span>
+              </a>
+            </div>
+
+            <div class="hero-status-pill">
+              <span class="status-dot-pulse" aria-hidden="true"></span>
+              <span>Experimental architecture, Rust scheduler simulation, and prototype development in progress.</span>
+            </div>
+          </div>
+
+          <div class="hero-visual-card">
+            <img src="assets/logo-synergetics.png" alt="SynergeticOS Geodesic Globe and Orbital Rings Logo" class="hero-logo-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept Cards Row (Directly below Hero) -->
+      <section class="concepts-row-section">
+        <div class="container">
+          <div class="concept-cards-grid">
+            <!-- Card 1 -->
+            <div class="concept-card">
+              <div class="concept-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <circle cx="5" cy="19" r="3"></circle>
+                  <circle cx="19" cy="19" r="3"></circle>
+                  <line x1="12" y1="8" x2="5" y2="16"></line>
+                  <line x1="12" y1="8" x2="19" y2="16"></line>
+                  <line x1="8" y1="19" x2="16" y2="19"></line>
+                </svg>
+              </div>
+              <h3 class="concept-card-title">Topology-Based Modeling</h3>
+              <p class="concept-card-body">Explore whether relationships and dependencies among processes, resources, and system components can be represented through connected structures.</p>
+              <div class="concept-card-footer">
+                <span class="badge-tag">RESEARCH CONCEPT</span>
+                <a href="#architecture" class="card-arrow-link" aria-label="Explore Topology-Based Modeling">&rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="concept-card">
+              <div class="concept-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="concept-card-title">Resource-Field Abstraction</h3>
+              <p class="concept-card-body">Investigate a proposed model for representing resource availability and distribution across CPU, memory, I/O, and other system capacities.</p>
+              <div class="concept-card-footer">
+                <span class="badge-tag badge-teal">RESEARCH CONCEPT</span>
+                <a href="#architecture" class="card-arrow-link" aria-label="Explore Resource-Field Abstraction">&rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="concept-card">
+              <div class="concept-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="concept-card-title">Adaptive Scheduling</h3>
+              <p class="concept-card-body">Explore scheduling decisions that respond to workload characteristics, resource conditions, and relationships among competing tasks.</p>
+              <div class="concept-card-footer">
+                <span class="badge-tag">RESEARCH CONCEPT</span>
+                <a href="#simulation" class="card-arrow-link" aria-label="Explore Adaptive Scheduling">&rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="concept-card">
+              <div class="concept-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 19 8.5 19 15.5 12 22 5 15.5 5 8.5 12 2"></polygon>
+                  <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                  <polyline points="19 8.5 12 15.5 5 8.5"></polyline>
+                </svg>
+              </div>
+              <h3 class="concept-card-title">Emergent Coordination</h3>
+              <p class="concept-card-body">Investigate whether coordinated local decisions can produce useful system-wide behavior under defined workloads.</p>
+              <div class="concept-card-footer">
+                <span class="badge-tag badge-green">RESEARCH CONCEPT</span>
+                <a href="#architecture" class="card-arrow-link" aria-label="Explore Emergent Coordination">&rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: What is the Synergetics Operating System? -->
+      <section class="section section-bg-pale" id="what-is-sos">
+        <div class="container">
+          <div class="what-is-grid">
+            <div>
+              <span class="section-eyebrow">FOUNDATIONAL OVERVIEW</span>
+              <h2 class="section-title">What is the Synergetics Operating System?</h2>
+              <p class="lead-prose">
+                The Synergetics Operating System is an experimental approach to operating-system architecture that explores the application of geometric relationships, topology-based modeling, and systems thinking to the coordination of computational resources.
+              </p>
+              <p class="prose-muted">
+                The central research question is whether relationships among processes, workloads, and available resources can be represented in ways that help inform adaptive scheduling and resource-management decisions.
+              </p>
+              <p class="prose-muted">
+                Rather than treating the project as an established alternative to conventional operating systems, SOS investigates a conceptual framework through research, software simulation, documentation, and iterative prototyping.
+              </p>
+              <p class="prose-muted">
+                The project draws intellectual inspiration from Buckminster Fuller's Synergetics, particularly the study of geometric relationships, interconnected structures, synergy, and the pursuit of doing more with less.
+              </p>
+              <div class="quote-highlight-box">
+                <p class="quote-text">
+                  “SOS is an ongoing experiment. Its architectural ideas, scheduler simulation, and prototype require continued implementation, testing, technical review, and empirical evaluation.”
+                </p>
+              </div>
+            </div>
+
+            <div class="visual-metric-cluster">
+              <div class="metric-panel">
+                <div class="metric-panel-num">01</div>
+                <div class="metric-panel-label">Topology Graph</div>
+                <div class="metric-panel-desc">Modeling dependencies, spatial distances, and structural linkages across workloads.</div>
+              </div>
+              <div class="metric-panel">
+                <div class="metric-panel-num">02</div>
+                <div class="metric-panel-label">Resource Fields</div>
+                <div class="metric-panel-desc">Continuous representation of compute capacity, memory channels, and I/O gradients.</div>
+              </div>
+              <div class="metric-panel">
+                <div class="metric-panel-num">03</div>
+                <div class="metric-panel-label">Rust Simulation</div>
+                <div class="metric-panel-desc">Verifiable algorithmic test harness modeling scheduling heuristics under load.</div>
+              </div>
+              <div class="metric-panel">
+                <div class="metric-panel-num">04</div>
+                <div class="metric-panel-label">Open Research</div>
+                <div class="metric-panel-desc">Published systems documentation, open repositories, and collaborative peer inquiry.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Why Explore SOS? (5 Subsections) -->
+      <section class="section section-bg-white" id="why-sos">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">RESEARCH MOTIVATION</span>
+            <h2 class="section-title">Why Explore a New Approach to Operating System Design?</h2>
+            <p class="section-subtitle">
+              Modern operating systems already contain sophisticated mechanisms for process scheduling, memory management, input/output coordination, security, and resource allocation. However, the complexity of coordinating workloads and resources continues to provide opportunities for research into new models and algorithms.
+            </p>
+          </div>
+
+          <div style="max-width: 860px; margin: 0 auto 40px auto; text-align: center;">
+            <p class="prose-muted">
+              The Synergetics Operating System is motivated by a specific question: could a topology-oriented, relationship-aware model provide a useful additional perspective on the way system components coordinate and compete for resources? SOS does not assume that conventional operating systems are inherently inefficient. Instead, it seeks to explore a different conceptual framework and determine whether it offers measurable advantages under particular conditions.
+            </p>
+          </div>
+
+          <div class="why-subsections-grid">
+            <!-- 1 -->
+            <div class="why-subcard">
+              <span class="subcard-num">Sub-Inquiry 01</span>
+              <h3 class="subcard-title">Understanding Relationships Between Processes and Resources</h3>
+              <p class="subcard-body">Computational workloads do not operate in isolation. They compete for CPU time, memory, storage access, network capacity, and other resources. SOS explores whether modeling these relationships explicitly could help inform scheduling and coordination decisions.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="why-subcard">
+              <span class="subcard-num">Sub-Inquiry 02</span>
+              <h3 class="subcard-title">Investigating Adaptive Resource Management</h3>
+              <p class="subcard-body">System conditions change as workloads arrive, finish, block, or compete for limited capacity. SOS investigates whether a relationship-aware architecture could support decisions that adapt to changing resource availability and workload requirements.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="why-subcard">
+              <span class="subcard-num">Sub-Inquiry 03</span>
+              <h3 class="subcard-title">Exploring Geometry and Topology in Computing</h3>
+              <p class="subcard-body">Geometric and topological models offer ways of describing structure, connectivity, and relationships. SOS explores how these ideas might be used as abstractions in systems design, while recognizing that practical benefits must be established through implementation and testing.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="why-subcard">
+              <span class="subcard-num">Sub-Inquiry 04</span>
+              <h3 class="subcard-title">Studying Emergent System Behavior</h3>
+              <p class="subcard-body">Interactions among individual processes and resource-allocation decisions can influence system-wide behavior. SOS investigates whether carefully designed local decisions can contribute to useful global coordination.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="why-subcard">
+              <span class="subcard-num">Sub-Inquiry 05</span>
+              <h3 class="subcard-title">Pursuing Resource Efficiency (Ephemeralization)</h3>
+              <p class="subcard-body">Ephemeralization, a concept associated with Buckminster Fuller, emphasizes doing more with less. In SOS, this serves as a motivation to investigate resource utilization, scheduling overhead, responsiveness, and adaptability. Any claimed improvement must be demonstrated through reproducible experiments and appropriate comparisons.</p>
+            </div>
+          </div>
+
+          <div class="why-conclusion-card">
+            <p class="why-conclusion-text">
+              “The objective is not to declare a new operating system superior before it is tested. The objective is to formulate a different architectural hypothesis, implement experiments, measure outcomes, and refine the design based on evidence.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Buckminster Fuller and Synergetics -->
+      <section class="section section-bg-pale" id="synergetics">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">PHILOSOPHICAL ANCHOR</span>
+            <h2 class="section-title">From Geometric Relationships to Systems Architecture</h2>
+            <p class="section-subtitle">
+              Buckminster Fuller developed Synergetics as a framework for exploring geometry, interconnected relationships, and the behavior of systems. His work encouraged people to think beyond isolated components and examine how structures and relationships contribute to the behavior of a whole.
+            </p>
+          </div>
+
+          <div style="max-width: 860px; margin: 0 auto 48px auto;">
+            <p class="lead-prose" style="text-align: center;">
+              The Synergetics Operating System takes inspiration from this style of systems thinking and asks how related ideas might inform computing architecture. For SOS, the connection is exploratory rather than a claim that Fuller's work directly specifies an operating system. Geometric structure and systems thinking can inspire new models, but their practical value must be demonstrated through algorithms, implementation, and testing.
+            </p>
+          </div>
+
+          <div class="synergetics-cards-grid">
+            <div class="synergetics-card">
+              <h3 class="synergetics-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                Synergy
+              </h3>
+              <p class="synergetics-card-text">Explore how interactions between components influence the behavior of a system, where collective performance transcends isolated parts.</p>
+            </div>
+
+            <div class="synergetics-card">
+              <h3 class="synergetics-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                Geometric Relationships
+              </h3>
+              <p class="synergetics-card-text">Use geometric structures as inspiration for representing connections, multidimensional distances, and relational organization.</p>
+            </div>
+
+            <div class="synergetics-card">
+              <h3 class="synergetics-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Ephemeralization
+              </h3>
+              <p class="synergetics-card-text">Investigate whether resource utilization and computational work can be improved by doing progressively more with less resource overhead.</p>
+            </div>
+
+            <div class="synergetics-card">
+              <h3 class="synergetics-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Whole-System Thinking
+              </h3>
+              <p class="synergetics-card-text">Examine the deep feedback loops between workloads, physical resources, scheduling decisions, and overall system behavior.</p>
+            </div>
+          </div>
+
+          <!-- Conceptual Comparison Diagram -->
+          <div class="comparison-container">
+            <div class="comparison-header">
+              <h3 class="comparison-title">Conceptual Systems Perspective Comparison</h3>
+              <p class="comparison-subtitle">Examining conventional paradigms alongside proposed synergetic abstractions</p>
+            </div>
+
+            <div class="comparison-grid">
+              <div class="comparison-col col-conventional">
+                <div class="comparison-col-header">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-navy)"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <h4 class="comparison-col-title">Conventional Systems Perspective</h4>
+                </div>
+                <ul class="comparison-list">
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-text-muted)"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <span>Linear task queues, time-slice round-robin slices, and priority runqueues</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-text-muted)"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    <span>Independent CPU, memory, and I/O subsystem tracking and quotas</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-text-muted)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Discrete metric polling, static heuristics, and isolated policy trees</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-text-muted)"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    <span>Direct explicit IPC dependencies, mutexes, and synchronization locks</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="comparison-col col-sos">
+                <div class="comparison-col-header">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-primary)"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                  <h4 class="comparison-col-title">Proposed SOS Research Perspective</h4>
+                </div>
+                <ul class="comparison-list">
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-teal)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Connected process and resource topological structures and relationship graphs</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-teal)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Unified resource-field abstraction mapping availability as spatial density</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-teal)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Adaptive scheduling hypotheses evaluated dynamically against topological proximity</span>
+                  </li>
+                  <li class="comparison-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-teal)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Continuous system feedback loops driving emergent self-coordination</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="comparison-disclaimer">
+              * Note: This is an architectural conceptual comparison. Modern production operating systems also employ dependency graphs, feedback mechanisms, adaptive scheduling, and resource-aware algorithms. The SOS initiative explores whether Fuller's topological principles offer a novel mathematical formulation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Proposed SOS Architecture (Interactive Diagram) -->
+      <section class="section section-bg-white" id="architecture">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">SYSTEM ARCHITECTURE</span>
+            <h2 class="section-title">A Relationship-Aware Model of Computing</h2>
+            <p class="section-subtitle">
+              The proposed SOS architecture investigates whether a topology-based model of processes and computational resources can inform adaptive system coordination. Its components are conceptual models under development rather than a declaration that all elements are already implemented.
+            </p>
+          </div>
+
+          <div class="architecture-container">
+            <!-- Left: Interactive SVG Diagram -->
+            <div class="arch-canvas-wrap">
+              <svg class="arch-svg-diagram" viewBox="0 0 680 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Synergetics Operating System Interactive Architecture Diagram">
+                <defs>
+                  <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 8 5 L 0 9 z" fill="#0879D1" />
+                  </marker>
+                  <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 8 5 L 0 9 z" fill="#159C91" />
+                  </marker>
+                  <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 8 5 L 0 9 z" fill="#F2A52B" />
+                  </marker>
+                </defs>
+
+                <!-- Background Subtle Grid -->
+                <path d="M40 0 V480 M120 0 V480 M200 0 V480 M280 0 V480 M360 0 V480 M440 0 V480 M520 0 V480 M600 0 V480" stroke="#EAF4FB" stroke-width="1" />
+                <path d="M0 60 H680 M0 140 H680 M0 220 H680 M0 300 H680 M0 380 H680 M0 460 H680" stroke="#EAF4FB" stroke-width="1" />
+
+                <!-- Connecting Flow Lines -->
+                <!-- Process to Topology -->
+                <path d="M 180 90 L 310 90" stroke="#0879D1" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-blue)" />
+                <!-- Topology to Scheduler -->
+                <path d="M 430 90 L 530 90 L 530 200" stroke="#0879D1" stroke-width="2.5" marker-end="url(#arrow-blue)" />
+                <!-- Resource Field to Scheduler -->
+                <path d="M 180 240 L 450 240" stroke="#159C91" stroke-width="2.5" marker-end="url(#arrow-teal)" />
+                <!-- Scheduler to Feedback -->
+                <path d="M 530 280 L 530 380 L 430 380" stroke="#F2A52B" stroke-width="2.5" marker-end="url(#arrow-orange)" />
+                <!-- Feedback to Resource Field Loop -->
+                <path d="M 310 380 L 110 380 L 110 280" stroke="#159C91" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-teal)" />
+                <!-- Shell/UI bidirectional with Topology & Scheduler -->
+                <path d="M 370 130 L 370 200" stroke="#79B96B" stroke-width="2" stroke-dasharray="4 4" />
+
+                <!-- Node 1: Process and Workload Model -->
+                <g class="arch-node" data-component="process" tabindex="0" role="button" aria-label="Component 1: Process and Workload Model">
+                  <rect x="40" y="50" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#0879D1" stroke-width="2" />
+                  <circle cx="65" cy="75" r="10" fill="#EAF4FB" stroke="#0879D1" stroke-width="1.5" />
+                  <text x="65" y="79" font-size="11" font-weight="bold" fill="#0879D1" text-anchor="middle">1</text>
+                  <text x="85" y="78" font-size="13" font-weight="bold" fill="#12345A">Process Model</text>
+                  <text x="55" y="105" font-size="10.5" fill="#5B7185">Workload &amp; State</text>
+                </g>
+
+                <!-- Node 2: Topology Model -->
+                <g class="arch-node" data-component="topology" tabindex="0" role="button" aria-label="Component 2: Topology Model">
+                  <rect x="310" y="50" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#0879D1" stroke-width="2" />
+                  <circle cx="335" cy="75" r="10" fill="#EAF4FB" stroke="#0879D1" stroke-width="1.5" />
+                  <text x="335" y="79" font-size="11" font-weight="bold" fill="#0879D1" text-anchor="middle">2</text>
+                  <text x="355" y="78" font-size="13" font-weight="bold" fill="#12345A">Topology Model</text>
+                  <text x="325" y="105" font-size="10.5" fill="#5B7185">Task &amp; Resource Graph</text>
+                </g>
+
+                <!-- Node 3: Resource Field -->
+                <g class="arch-node" data-component="resource" tabindex="0" role="button" aria-label="Component 3: Resource Field">
+                  <rect x="40" y="200" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#159C91" stroke-width="2" />
+                  <circle cx="65" cy="225" r="10" fill="rgba(21, 156, 145, 0.12)" stroke="#159C91" stroke-width="1.5" />
+                  <text x="65" y="229" font-size="11" font-weight="bold" fill="#159C91" text-anchor="middle">3</text>
+                  <text x="85" y="228" font-size="13" font-weight="bold" fill="#12345A">Resource Field</text>
+                  <text x="55" y="255" font-size="10.5" fill="#5B7185">CPU, Mem, I/O Space</text>
+                </g>
+
+                <!-- Node 4: Adaptive Scheduler -->
+                <g class="arch-node selected" data-component="scheduler" tabindex="0" role="button" aria-label="Component 4: Adaptive Scheduler">
+                  <rect x="450" y="200" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#F2A52B" stroke-width="3" />
+                  <circle cx="475" cy="225" r="10" fill="rgba(242, 165, 43, 0.15)" stroke="#F2A52B" stroke-width="1.5" />
+                  <text x="475" y="229" font-size="11" font-weight="bold" fill="#F2A52B" text-anchor="middle">4</text>
+                  <text x="495" y="228" font-size="13" font-weight="bold" fill="#12345A">Adaptive Scheduler</text>
+                  <text x="465" y="255" font-size="10.5" fill="#5B7185">Rust Heuristics Engine</text>
+                </g>
+
+                <!-- Node 5: System Feedback -->
+                <g class="arch-node" data-component="feedback" tabindex="0" role="button" aria-label="Component 5: System Feedback">
+                  <rect x="310" y="340" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#159C91" stroke-width="2" />
+                  <circle cx="335" cy="365" r="10" fill="rgba(21, 156, 145, 0.12)" stroke="#159C91" stroke-width="1.5" />
+                  <text x="335" y="369" font-size="11" font-weight="bold" fill="#159C91" text-anchor="middle">5</text>
+                  <text x="355" y="368" font-size="13" font-weight="bold" fill="#12345A">System Feedback</text>
+                  <text x="325" y="395" font-size="10.5" fill="#5B7185">Runtime Telemetry Loop</text>
+                </g>
+
+                <!-- Node 6: User Interface and Shell -->
+                <g class="arch-node" data-component="shell" tabindex="0" role="button" aria-label="Component 6: User Interface and Shell">
+                  <rect x="40" y="340" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#79B96B" stroke-width="2" />
+                  <circle cx="65" cy="365" r="10" fill="rgba(121, 185, 107, 0.15)" stroke="#79B96B" stroke-width="1.5" />
+                  <text x="65" y="369" font-size="11" font-weight="bold" fill="#79B96B" text-anchor="middle">6</text>
+                  <text x="85" y="368" font-size="13" font-weight="bold" fill="#12345A">UI &amp; Shell</text>
+                  <text x="55" y="395" font-size="10.5" fill="#5B7185">Interactive Environment</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Right: Interactive Component Inspection Sidebar -->
+            <div class="arch-sidebar-card">
+              <div class="arch-card-header">
+                <div class="arch-card-title-wrap">
+                  <h3 class="arch-card-title" id="arch-card-title">4. Adaptive Scheduler</h3>
+                </div>
+                <span class="arch-card-status-badge" id="arch-card-status">Simulation in Progress</span>
+              </div>
+
+              <div class="arch-detail-section">
+                <h4 class="arch-detail-heading">Component Purpose</h4>
+                <p class="arch-detail-text" id="arch-card-purpose">
+                  Investigates how workload characteristics, topological proximity, and fluctuating resource conditions might inform relationship-aware scheduling decisions.
+                </p>
+              </div>
+
+              <div class="arch-detail-section">
+                <h4 class="arch-detail-heading">Relationship to Overall Architecture</h4>
+                <p class="arch-detail-text" id="arch-card-relationship">
+                  Evaluates task-to-resource compatibility and dispatches execution units based on topological affinity rather than naive round-robin queues.
+                </p>
+              </div>
+
+              <div class="arch-detail-section">
+                <h4 class="arch-detail-heading">Research &amp; Implementation Status</h4>
+                <p class="arch-detail-text" id="arch-card-research">
+                  Implemented as an executable Rust scheduler simulation (synergetic_scheduler_rust_simulation.rs). Empirical evaluation and validation ongoing.
+                </p>
+              </div>
+
+              <!-- Quick Selector Pills -->
+              <div class="arch-nav-selector" role="tablist" aria-label="Architecture Component Selector">
+                <button type="button" class="arch-pill-btn" data-component="process" role="tab">1. Process Model</button>
+                <button type="button" class="arch-pill-btn" data-component="topology" role="tab">2. Topology</button>
+                <button type="button" class="arch-pill-btn" data-component="resource" role="tab">3. Resource Field</button>
+                <button type="button" class="arch-pill-btn active" data-component="scheduler" role="tab">4. Scheduler</button>
+                <button type="button" class="arch-pill-btn" data-component="feedback" role="tab">5. Feedback</button>
+                <button type="button" class="arch-pill-btn" data-component="shell" role="tab">6. UI &amp; Shell</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Rust Scheduler Simulation -->
+      <section class="section section-bg-pale" id="simulation">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">EXECUTABLE EXPERIMENTATION</span>
+            <h2 class="section-title">Exploring Scheduling Through Rust Simulation</h2>
+            <p class="section-subtitle">
+              Translating conceptual topology and field hypotheses into reproducible, benchmarkable Rust algorithms.
+            </p>
+          </div>
+
+          <div class="simulation-grid">
+            <div class="sim-info-col">
+              <p class="lead-prose">
+                As part of developing the Synergetics Operating System concept, Solomon Yaw Adeklo developed a Rust-based scheduler simulation to explore aspects of the proposed scheduling approach.
+              </p>
+              <p class="prose-muted">
+                The simulation represents an important step in translating architectural ideas into executable experiments. A simulation can help investigate algorithms, model workload conditions, examine resource-allocation behavior, and identify questions that need further testing before deeper operating-system integration is attempted.
+              </p>
+              <p class="prose-muted">
+                The scheduler simulation is an ongoing development effort. Its actual behavior, supported features, assumptions, and results must be established by inspecting the source code and running appropriate tests.
+              </p>
+
+              <div class="sim-repo-card">
+                <h3 class="sim-repo-title">Rust Scheduler Simulation Repository</h3>
+                <p class="sim-repo-meta">synergetic-os / Simulation / synergetic_scheduler_rust_simulation.rs</p>
+                <div class="sim-repo-status">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Simulation development and validation in progress</span>
+                </div>
+                <div class="sim-actions">
+                  <a href="https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Explore Scheduler Source Code</span>
+                  </a>
+                  <a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill">
+                    <span>View SOS GitHub Organization</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Code Window Preview -->
+            <div class="code-window-card">
+              <div class="code-window-bar">
+                <div class="code-dots">
+                  <span class="code-dot dot-red"></span>
+                  <span class="code-dot dot-yellow"></span>
+                  <span class="code-dot dot-green"></span>
+                </div>
+                <span class="code-title">synergetic_scheduler_rust_simulation.rs</span>
+                <span style="font-size: 0.75rem; color: #5B7185;">Rust 2021</span>
+              </div>
+              <pre class="code-block"><code><span class="comm">// Synergetics Operating System - Scheduler Simulation</span>
+<span class="comm">// Topological task relationship &amp; resource field modeling</span>
+
+<span class="kw">pub struct</span> <span class="type">TaskNode</span> {
+    <span class="kw">pub</span> id: <span class="type">usize</span>,
+    <span class="kw">pub</span> priority: <span class="type">u32</span>,
+    <span class="kw">pub</span> compute_demand: <span class="type">f64</span>,
+    <span class="kw">pub</span> memory_demand: <span class="type">f64</span>,
+    <span class="kw">pub</span> topology_coords: [<span class="type">f64</span>; <span class="num">3</span>],
+    <span class="kw">pub</span> dependencies: <span class="type">Vec</span>&lt;<span class="type">usize</span>&gt;,
+}
+
+<span class="kw">pub struct</span> <span class="type">ResourceField</span> {
+    <span class="kw">pub</span> cpu_density: <span class="type">f64</span>,
+    <span class="kw">pub</span> memory_gradient: <span class="type">f64</span>,
+    <span class="kw">pub</span> io_saturation: <span class="type">f64</span>,
+}
+
+<span class="kw">impl</span> <span class="type">SynergeticScheduler</span> {
+    <span class="kw">pub fn</span> <span class="fn">evaluate_affinity</span>(
+        &amp;<span class="kw">self</span>,
+        task: &amp;<span class="type">TaskNode</span>,
+        field: &amp;<span class="type">ResourceField</span>
+    ) -&gt; <span class="type">f64</span> {
+        <span class="comm">// Calculate synergetic fit score based on topology distance</span>
+        <span class="kw">let</span> dist_sq = task.topology_coords.iter().map(|c| c * c).sum::&lt;<span class="type">f64</span>&gt;();
+        <span class="kw">let</span> resource_fit = field.cpu_density / (<span class="num">1.0</span> + task.compute_demand);
+        resource_fit * (<span class="num">1.0</span> / (<span class="num">1.0</span> + dist_sq.sqrt()))
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: The Evolving SOS Prototype -->
+      <section class="section section-bg-white" id="prototype">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">DEVELOPMENT PROGRESS</span>
+            <h2 class="section-title">From Research to an Experimental Prototype</h2>
+            <p class="section-subtitle">
+              Grounding theoretical concepts in an active codebase.
+            </p>
+          </div>
+
+          <div class="prototype-grid">
+            <div>
+              <p class="lead-prose">
+                The Synergetics Operating System prototype is an ongoing attempt to translate the project's research ideas into an evolving software implementation.
+              </p>
+              <p class="prose-muted">
+                The prototype provides a development environment in which architectural concepts can be explored, implementation choices examined, and the relationship between the proposed design and practical software engineering investigated.
+              </p>
+              <p class="prose-muted">
+                Its capabilities and scope will evolve as the work progresses. The existence of a prototype does not mean that SOS is already a complete, independently bootable, production-ready operating system.
+              </p>
+              <p class="prose-muted">
+                Further development, technical review, testing, documentation, and evaluation are required to determine which concepts can be implemented effectively and what limitations remain.
+              </p>
+
+              <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="https://github.com/synergetic-os/Prototype" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <span>Explore the Prototype</span>
+                </a>
+                <a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill">
+                  <span>View All SOS Repositories</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="prototype-card">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--color-navy); margin-bottom: 8px;">Implementation Capability Status</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted);">Transparent distinction between verified implementation and ongoing research goals.</p>
+
+              <div class="proto-table-wrap">
+                <table class="proto-table">
+                  <thead>
+                    <tr>
+                      <th>Subsystem Component</th>
+                      <th>Status Category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Rust Scheduler Simulation Harness</td>
+                      <td><span class="tag-verified">Verified Implemented</span></td>
+                    </tr>
+                    <tr>
+                      <td>Theoretical Architecture Documentation</td>
+                      <td><span class="tag-verified">Verified Published</span></td>
+                    </tr>
+                    <tr>
+                      <td>Experimental Prototype Scaffolding</td>
+                      <td><span class="tag-experimental">In Progress</span></td>
+                    </tr>
+                    <tr>
+                      <td>Topological Process Graph Engine</td>
+                      <td><span class="tag-experimental">In Progress</span></td>
+                    </tr>
+                    <tr>
+                      <td>Continuous Resource Field Abstraction</td>
+                      <td><span class="tag-proposed">Proposed Model</span></td>
+                    </tr>
+                    <tr>
+                      <td>Kernel-Level Hardware Bootloader</td>
+                      <td><span class="tag-proposed">Longer-Term Research</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); font-style: italic;">
+                * Features are reviewed and tracked publicly on the official GitHub organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Two Original OS UI/UX Concept Images -->
+      <section class="section section-bg-pale" id="ui-ux">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">VISUAL EXPLORATION</span>
+            <h2 class="section-title">Original OS UI/UX Concepts</h2>
+            <p class="section-subtitle">
+              Visualizing how geometric coordination and resource awareness might inform future human-computer interfaces.
+            </p>
+          </div>
+
+          <div class="concepts-gallery-grid">
+            <!-- Concept 1 -->
+            <div class="concept-image-card">
+              <div class="concept-img-wrapper concept-lightbox-trigger" data-index="0" role="button" tabindex="0" aria-label="Enlarge Concept 01 image">
+                <img src="assets/concept-01-desktop.jpg" alt="Conceptual Synergetics Operating System desktop featuring a geometric dashboard, application windows, and resource visualization." class="concept-img" loading="lazy" />
+                <div class="concept-overlay-zoom">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Click to Enlarge</span>
+                </div>
+              </div>
+              <div class="concept-caption-box">
+                <h3 class="concept-card-heading">Concept 01 — Synergetic Desktop Environment</h3>
+                <p class="concept-card-desc">An exploration of how geometric organization and resource awareness might inform a future desktop experience.</p>
+                <button type="button" class="btn btn-secondary btn-pill concept-lightbox-trigger" data-index="0" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">
+                  <span>View High-Res Detail</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Concept 2 -->
+            <div class="concept-image-card">
+              <div class="concept-img-wrapper concept-lightbox-trigger" data-index="1" role="button" tabindex="0" aria-label="Enlarge Concept 02 image">
+                <img src="assets/concept-02-monitor.jpg" alt="Conceptual SOS monitoring interface with interconnected process nodes, resource panels, and a scheduling timeline." class="concept-img" loading="lazy" />
+                <div class="concept-overlay-zoom">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Click to Enlarge</span>
+                </div>
+              </div>
+              <div class="concept-caption-box">
+                <h3 class="concept-card-heading">Concept 02 — Adaptive Resource and Topology Monitor</h3>
+                <p class="concept-card-desc">A proposed interface for exploring relationships among workloads, computational resources, and scheduling decisions.</p>
+                <button type="button" class="btn btn-secondary btn-pill concept-lightbox-trigger" data-index="1" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">
+                  <span>View High-Res Detail</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mandatory Disclosure Notice -->
+          <div class="concept-disclosure-notice">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <p>These images are conceptual UI/UX designs created to communicate the project's visual direction. They do not demonstrate that all depicted features have been implemented.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Founder Biography -->
+      <section class="section section-bg-white" id="founder">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">LEADERSHIP &amp; ORIGIN</span>
+            <h2 class="section-title">Meet the Founder</h2>
+            <p class="section-subtitle">
+              The motivation, research journey, and transparent background behind the Synergetics Operating System concept.
+            </p>
+          </div>
+
+          <div class="founder-profile-grid">
+            <div class="founder-photo-col">
+              <div class="founder-img-frame">
+                <img src="assets/solomon-profile.jpg" alt="Photograph of Solomon Yaw Adeklo, Founder and Originator of Synergetics Operating System" class="founder-photo-img" />
+              </div>
+              <h3 class="founder-name-heading">Solomon Yaw Adeklo</h3>
+              <p class="founder-role-title">Founder and Originator of the Synergetics Operating System Concept</p>
+              
+              <div class="founder-links-row">
+                <a href="https://www.solomonadeklo.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill" style="padding: 8px 16px; font-size: 0.85rem;">
+                  <span>Visit Portfolio ↗</span>
+                </a>
+                <a href="https://github.com/solomonyaw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill" style="padding: 8px 16px; font-size: 0.85rem;">
+                  <span>View GitHub ↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/solomon-adeklo-1501453bb/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill" style="padding: 8px 16px; font-size: 0.85rem;">
+                  <span>Connect on LinkedIn ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="founder-bio-col">
+              <span class="bio-highlight-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Biographical Profile &amp; Project Origins
+              </span>
+              <p class="bio-paragraph">
+                Solomon Yaw Adeklo is a Ghanaian software developer and the originator of the Synergetics Operating System concept. His work explores how ideas inspired by Buckminster Fuller's Synergetics, geometric relationships, and systems thinking might contribute to new approaches to operating-system architecture.
+              </p>
+              <p class="bio-paragraph">
+                The concept behind SOS emerged from Solomon's interest in applying systems thinking and the principle of ephemeralization—the pursuit of doing more with less—to the organization of computational resources. His vision is to investigate whether topology-based models, adaptive resource management, and emergent optimization can provide a useful framework for exploring system coordination.
+              </p>
+              <p class="bio-paragraph">
+                Solomon approaches this project from an application-level software development background rather than a professional career in operating-system or kernel development. He does not present himself as an experienced kernel engineer. Instead, he has pursued the project as an interdisciplinary research and development effort, using programming experiments, architectural exploration, technical documentation, and iterative prototyping to investigate his ideas.
+              </p>
+              <p class="bio-paragraph">
+                To support this work, Solomon has used AI-assisted prompt engineering tools, including ChatGPT, to explore implementation approaches, refine system documentation, examine architectural alternatives, assist with code development, and support the creation of a Rust scheduler simulation and an evolving operating-system prototype.
+              </p>
+              <p class="bio-paragraph">
+                AI tools have served as research and development aids. Their use does not remove the need for human judgment, code review, testing, validation, and independent technical assessment. The architecture and prototype remain ongoing work.
+              </p>
+              <p class="bio-paragraph">
+                Solomon's approach reflects a commitment to exploring an ambitious technical idea through incremental development, transparent documentation, and open-source collaboration. Rather than claiming that SOS has already solved the challenges of operating-system design, the project seeks to turn a conceptual vision into testable software and evaluate its potential through further research.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Research Publications & Documentation -->
+      <section class="section section-bg-pale" id="research">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">ACADEMIC &amp; TECHNICAL DISCLOSURE</span>
+            <h2 class="section-title">Research, Documentation, and Technical Exploration</h2>
+            <p class="section-subtitle">
+              SOS is being developed through conceptual research, technical documentation, simulation, and iterative prototyping. These materials describe the project's proposed architecture and development direction. Readers should distinguish documented proposals from independently verified experimental results.
+            </p>
+          </div>
+
+          <div class="publications-grid">
+            <!-- Publication 1 -->
+            <div class="publication-card">
+              <div class="pub-badge-row">
+                <span class="badge-tag">RESEARCH PUBLICATION</span>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">ResearchGate</span>
+              </div>
+              <h3 class="pub-title">SYNERGETIC OPERATING SYSTEM (SOS): A Topology-Based Emergent and Resource-Field Operating System Architecture</h3>
+              <p class="pub-desc">
+                Explore the research publication describing the proposed SOS architecture, including its topology-based perspective, emergent coordination concepts, and resource-field model.
+              </p>
+              <div class="pub-footer">
+                <span class="pub-platform-name">ResearchGate Publication</span>
+                <a href="https://www.researchgate.net/publication/408462085_SYNERGETIC_OPERATING_SYSTEM_SOS_A_Topology-Based_Emergent_and_Resource-Field_Operating_System_Architecture" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+                  <span>Read Research Publication ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Publication 2 -->
+            <div class="publication-card">
+              <div class="pub-badge-row">
+                <span class="badge-tag badge-teal">SYSTEMS DOCUMENTATION</span>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">ResearchGate</span>
+              </div>
+              <h3 class="pub-title">A Comprehensive Systems Documentation of Synergetics Operating System</h3>
+              <p class="pub-desc">
+                Read the project's systems documentation for a more detailed account of its architectural concepts, system organization, and development direction.
+              </p>
+              <div class="pub-footer">
+                <span class="pub-platform-name">ResearchGate Documentation</span>
+                <a href="https://www.researchgate.net/publication/408461895_A_comprehensive_systems_documentation_of_Synergetics_operating_system" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+                  <span>Read System Documentation ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Open-Source Collaboration -->
+      <section class="section section-bg-white" id="contribute">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">COMMUNITY &amp; PARTICIPATION</span>
+            <h2 class="section-title">Help Explore the Future of Synergetic Computing</h2>
+            <p class="section-subtitle">
+              The Synergetics Operating System is an evolving open-source research initiative. Its long-term direction depends on continued experimentation, critical review, technical contributions, and evidence-based refinement.
+            </p>
+          </div>
+
+          <div style="max-width: 860px; margin: 0 auto 40px auto; text-align: center;">
+            <p class="lead-prose">
+              Developers, researchers, designers, students, and systems enthusiasts are invited to explore the project, examine the source code, review the documentation, and contribute where their skills and interests align.
+            </p>
+          </div>
+
+          <div class="collab-roles-grid">
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="collab-role-title">Rust Programming</h3>
+              <p class="collab-role-desc">Simulation development, memory-safe data structures, and concurrency benchmarking.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="collab-role-title">OS Architecture</h3>
+              <p class="collab-role-desc">Kernel design trade-offs, virtual memory mappings, and microkernel abstractions.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3 class="collab-role-title">Scheduling Algorithms</h3>
+              <p class="collab-role-desc">Algorithmic heuristics, real-time priority guarantees, and contention mitigation.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line></svg>
+              </div>
+              <h3 class="collab-role-title">Graph Theory &amp; Topology</h3>
+              <p class="collab-role-desc">Mathematical formulations of geodesic distances, clustering, and network flow.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="collab-role-title">Resource Models</h3>
+              <p class="collab-role-desc">Continuous field density calculations across heterogeneous computing cores.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="collab-role-title">UI/UX Design</h3>
+              <p class="collab-role-desc">Geometric data visualizations, interactive system telemetry, and shell environments.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h3 class="collab-role-title">Testing &amp; Benchmarking</h3>
+              <p class="collab-role-desc">Synthetic workload creation, trace generation, and empirical performance metrics.</p>
+            </div>
+
+            <div class="collab-role-card">
+              <div class="collab-role-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <h3 class="collab-role-title">Technical Writing</h3>
+              <p class="collab-role-desc">System documentation, research paper reviews, and clear architectural specs.</p>
+            </div>
+          </div>
+
+          <div class="collab-cta-box">
+            <h3 class="collab-cta-heading">“Explore the code. Review the research. Contribute to the experiment.”</h3>
+            <p class="collab-cta-text">Join the open discussions and code reviews on the official GitHub organization.</p>
+            <div class="collab-cta-buttons">
+              <a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Organization</span>
+              </a>
+              <a href="https://github.com/synergetic-os/Prototype" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill">
+                <span>View Prototype</span>
+              </a>
+              <a href="https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-pill">
+                <span>Explore Scheduler Simulation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Development Roadmap (5 Stages) -->
+      <section class="section section-bg-pale" id="roadmap">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">RESEARCH TIMELINE</span>
+            <h2 class="section-title">The Road Ahead</h2>
+            <p class="section-subtitle">
+              The SOS roadmap represents a proposed development direction. Milestones and priorities may change as implementation, testing, and research reveal new opportunities or limitations.
+            </p>
+          </div>
+
+          <div class="roadmap-timeline-wrap">
+            <!-- Stage 1 -->
+            <div class="roadmap-step completed">
+              <div class="roadmap-step-marker">1</div>
+              <div class="roadmap-card">
+                <span class="roadmap-step-tag">FOUNDATIONAL PHASE</span>
+                <h3 class="roadmap-step-title">Stage 1 — Conceptual Research</h3>
+                <ul class="roadmap-bullets">
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Define the architectural motivation and foundational principles.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Document the proposed topology and resource-field models.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Identify key assumptions that need rigorous experimental testing.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="roadmap-step active">
+              <div class="roadmap-step-marker">2</div>
+              <div class="roadmap-card">
+                <span class="roadmap-step-tag">CURRENT EMPHASIS</span>
+                <h3 class="roadmap-step-title">Stage 2 — Scheduler Simulation</h3>
+                <ul class="roadmap-bullets">
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Continue developing the Rust scheduler simulation.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Investigate workload and resource-model assumptions under synthetic stress.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Establish reproducible testing and benchmarking procedures.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="roadmap-step active">
+              <div class="roadmap-step-marker">3</div>
+              <div class="roadmap-card">
+                <span class="roadmap-step-tag">ITERATIVE DEVELOPMENT</span>
+                <h3 class="roadmap-step-title">Stage 3 — Prototype Development</h3>
+                <ul class="roadmap-bullets">
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Continue evolving the software prototype.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Verify implemented features and publish reproducible build instructions.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Clarify the boundaries between the prototype, simulation, and any future system-level implementation.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="roadmap-step">
+              <div class="roadmap-step-marker">4</div>
+              <div class="roadmap-card">
+                <span class="roadmap-step-tag">EMPIRICAL VALIDATION</span>
+                <h3 class="roadmap-step-title">Stage 4 — Evaluation and Refinement</h3>
+                <ul class="roadmap-bullets">
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Define meaningful experiments and comparison baselines against standard CFS/FIFO policies.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Measure scheduling behavior and resource utilization where applicable.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Document limitations and refine the architecture based on evidence.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stage 5 -->
+            <div class="roadmap-step">
+              <div class="roadmap-step-marker">5</div>
+              <div class="roadmap-card">
+                <span class="roadmap-step-tag">FORWARD HORIZON</span>
+                <h3 class="roadmap-step-title">Stage 5 — Longer-Term Systems Research</h3>
+                <ul class="roadmap-bullets">
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Investigate the feasibility of deeper system-level integration.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Explore security, reliability, compatibility, and deployment considerations.</span>
+                  </li>
+                  <li class="roadmap-bullet-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle></svg>
+                    <span>Identify the domain expertise and engineering work needed for more advanced development.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Frequently Asked Questions (Accordion) -->
+      <section class="section section-bg-white" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">COMMON INQUIRIES</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+              Clear answers regarding the project's scope, origins, methodology, and realistic expectations.
+            </p>
+          </div>
+
+          <div class="faq-accordion-wrap">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>What is Synergetics Operating System?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  SOS is an experimental research initiative exploring topology-based modeling, adaptive resource management, and related ideas in operating-system architecture.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>Is SOS a fully developed operating system?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  No. SOS is an evolving research and development project with a Rust scheduler simulation and a prototype under development. Its scope and capabilities must be evaluated against the actual implementation.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>Who founded SOS?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  Solomon Yaw Adeklo, a Ghanaian application-level software developer and the originator of the SOS concept.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>Is Solomon a professional system or kernel developer?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  Solomon's background is in application-level software development, rather than a professional career in kernel or operating-system engineering. The project is an ongoing effort to explore and develop the proposed architecture.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>How was AI used in the project?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  AI-assisted prompt engineering tools, including ChatGPT, were used to help explore ideas, refine documentation, reason about architectural alternatives, and support code development. The work still requires testing, validation, and technical review.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>Does SOS replace Linux, Windows, or macOS?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  No such claim is made. SOS is an experimental architectural exploration, not an established replacement for existing operating systems.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>How can I contribute?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  Visit the official GitHub organization at <a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer">https://github.com/synergetic-os</a> to explore the source code and available contribution opportunities.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+              <button type="button" class="faq-button" aria-expanded="false">
+                <span>Where can I read the research?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer-inner">
+                  Visit the research publication and system documentation linked in the <a href="#research">Research section</a> on ResearchGate.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- UI/UX Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="OS Concept Image Lightbox">
+      <div class="lightbox-content-box">
+        <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close enlarged image view">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <button type="button" class="lightbox-nav-btn lightbox-prev-btn" id="lightbox-prev-btn" aria-label="Previous concept image">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="lightbox-nav-btn lightbox-next-btn" id="lightbox-next-btn" aria-label="Next concept image">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <div class="lightbox-image-wrap">
+          <img src="assets/concept-01-desktop.jpg" alt="Enlarged OS Concept Image" class="lightbox-img" id="lightbox-img" />
+        </div>
+        <div class="lightbox-caption-bar">
+          <span class="lightbox-caption-text" id="lightbox-caption-text">Concept 01 — Synergetic Desktop Environment</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-brand-col">
+            <div class="footer-logo-row">
+              <img src="assets/logo-synergetics.png" alt="SynergeticOS Logo" class="footer-logo-img" />
+              <span class="footer-brand-title">Synergetics OS</span>
+            </div>
+            <p class="footer-brand-desc">
+              Exploring a new approach to operating-system architecture through Synergetics, topology-based modeling, and adaptive resource management.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Architecture &amp; Code</h4>
+            <ul class="footer-link-list">
+              <li><a href="https://github.com/synergetic-os" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Organization</a></li>
+              <li><a href="https://github.com/synergetic-os/Prototype" target="_blank" rel="noopener noreferrer" class="footer-link">Prototype Repository</a></li>
+              <li><a href="https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs" target="_blank" rel="noopener noreferrer" class="footer-link">Scheduler Simulation</a></li>
+              <li><a href="#architecture" class="footer-link">System Model</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Research &amp; Papers</h4>
+            <ul class="footer-link-list">
+              <li><a href="https://www.researchgate.net/publication/408462085_SYNERGETIC_OPERATING_SYSTEM_SOS_A_Topology-Based_Emergent_and_Resource-Field_Operating_System_Architecture" target="_blank" rel="noopener noreferrer" class="footer-link">SOS Research Paper</a></li>
+              <li><a href="https://www.researchgate.net/publication/408461895_A_comprehensive_systems_documentation_of_Synergetics_operating_system" target="_blank" rel="noopener noreferrer" class="footer-link">Systems Documentation</a></li>
+              <li><a href="#roadmap" class="footer-link">Development Roadmap</a></li>
+              <li><a href="#faq" class="footer-link">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Founder &amp; Contact</h4>
+            <ul class="footer-link-list">
+              <li><a href="https://www.solomonadeklo.com/" target="_blank" rel="noopener noreferrer" class="footer-link">Solomon Adeklo Portfolio</a></li>
+              <li><a href="https://github.com/solomonyaw" target="_blank" rel="noopener noreferrer" class="footer-link">Solomon's GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/solomon-adeklo-1501453bb/" target="_blank" rel="noopener noreferrer" class="footer-link">Solomon on LinkedIn</a></li>
+              <li><a href="#contribute" class="footer-link">Collaboration Areas</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-disclaimer-box">
+          <p>“Synergetics Operating System is an experimental research and development initiative. Its architectural concepts, simulation, and prototype remain subject to continued implementation, testing, and evaluation.”</p>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p>&copy; <span id="current-year"></span> Synergetics Operating System (SOS) Initiative. Open-source research.</p>
+          <p>Conceptualized by Solomon Yaw Adeklo</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Native JavaScript -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
