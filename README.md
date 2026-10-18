@@ -43,9 +43,11 @@ The visual identity is designed around the official Synergetics OS logo, featuri
 ├── script.js           # Vanilla JavaScript (navigation, interactive diagram, lightbox, FAQ)
 ├── assets/             # Local images and visual assets
 │   ├── logo-synergetics.png     # Official Synergetics OS logo
-│   ├── concept-01-desktop.jpg   # Concept 01: Synergetic Desktop Environment
-│   ├── concept-02-monitor.jpg   # Concept 02: Adaptive Resource & Topology Monitor
-│   └── solomon-profile.jpg      # Authentic photograph of founder Solomon Yaw Adeklo
+│   ├── system-architecture.jpg  # 🏗 System Architecture Blueprint & Execution Pipeline
+│   ├── design-model.jpg         # 📐 Design Model: 3D Vector Equilibrium & Equilibrium Equations
+│   ├── gui.png                  # Concept 01: Synergetic Desktop Environment
+│   ├── gui2.png                 # Concept 02: Adaptive Resource & Topology Monitor
+│   └── founder.png              # Authentic photograph of founder Solomon Yaw Adeklo
 ├── metadata.json       # Applet metadata configuration
 ├── vite.config.ts      # Vite configuration for local preview & static bundling
 └── README.md           # Documentation, editing, and deployment guide

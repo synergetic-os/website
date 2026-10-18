@@ -304,6 +304,26 @@ function initLightboxModal() {
     });
   });
 
+  // Blueprint image enlarge handlers
+  document.querySelectorAll('.arch-blueprint-img-wrap').forEach((wrap) => {
+    wrap.addEventListener('click', () => {
+      const img = wrap.querySelector('img');
+      if (!img) return;
+      lastActiveElement = document.activeElement;
+      const title = wrap.getAttribute('data-title') || img.alt || 'Architecture Blueprint';
+      const caption = wrap.getAttribute('data-caption') || '';
+      imgEl.src = img.getAttribute('src') || img.src;
+      imgEl.alt = title;
+      if (captionEl) {
+        captionEl.textContent = caption ? `${title} — ${caption}` : title;
+      }
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    });
+  });
+
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (prevBtn) prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
   if (nextBtn) nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
