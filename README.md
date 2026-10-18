@@ -13,6 +13,7 @@ The project originated when Solomon conceptualized the idea of a topology-based 
 - **Rust Scheduler Simulation**: [https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs](https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs)
 - **Research Publication (ResearchGate)**: [SYNERGETIC OPERATING SYSTEM (SOS): A Topology-Based Emergent and Resource-Field Operating System Architecture](https://www.researchgate.net/publication/408462085_SYNERGETIC_OPERATING_SYSTEM_SOS_A_Topology-Based_Emergent_and_Resource-Field_Operating_System_Architecture)
 - **Comprehensive Systems Documentation**: [A comprehensive systems documentation of Synergetics operating system](https://www.researchgate.net/publication/408461895_A_comprehensive_systems_documentation_of_Synergetics_operating_system)
+- **Synergetics OS LinkedIn Page**: [https://linkedin.com/company/synergetics-operating-system](https://linkedin.com/company/synergetics-operating-system)
 - **Founder Portfolio**: [https://www.solomonadeklo.com/](https://www.solomonadeklo.com/)
 - **Founder GitHub**: [https://github.com/solomonyaw](https://github.com/solomonyaw)
 - **Founder LinkedIn**: [https://www.linkedin.com/in/solomon-adeklo-1501453bb/](https://www.linkedin.com/in/solomon-adeklo-1501453bb/)
