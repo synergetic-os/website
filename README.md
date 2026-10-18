@@ -2,7 +2,7 @@
 
 This repository contains the official research, architecture, prototype, and founder website for the **Synergetics Operating System (SOS)** — an experimental open-source operating system initiative founded by **Solomon Yaw Adeklo**.
 
-The project investigates whether topology-based models, geometric relationships inspired by Buckminster Fuller's Synergetics, and adaptive resource management can inform a relationship-aware approach to operating-system architecture and process scheduling.
+The project originated when Solomon conceptualized the idea of a topology-based operating system as an undergraduate student at **Valley View University** in Ghana while studying the core Operating Systems course. The project investigates whether topology-based models, geometric relationships inspired by Buckminster Fuller's Synergetics, and adaptive resource management can inform a relationship-aware approach to operating-system architecture and process scheduling.
 
 ---
 

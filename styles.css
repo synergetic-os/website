@@ -1469,6 +1469,39 @@ button {
   align-self: flex-start;
 }
 
+.academic-origin-box {
+  background-color: var(--color-pale-blue);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-teal);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 16px 0 20px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.academic-origin-icon {
+  flex-shrink: 0;
+  color: var(--color-teal);
+  margin-top: 2px;
+}
+
+.academic-origin-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.academic-origin-text {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
 /* ==========================================================================
    Section: Research Publications
    ========================================================================== */
