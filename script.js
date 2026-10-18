@@ -215,12 +215,12 @@ function initArchitectureDiagram() {
    ========================================================================== */
 const CONCEPT_IMAGES = [
   {
-    src: 'assets/concept-01-desktop.jpg',
+    src: './gui.png',
     title: 'Concept 01 — Synergetic Desktop Environment',
     caption: 'An exploration of how geometric organization and resource awareness might inform a future desktop experience.'
   },
   {
-    src: 'assets/concept-02-monitor.jpg',
+    src: './gui2.png',
     title: 'Concept 02 — Adaptive Resource and Topology Monitor',
     caption: 'A proposed interface for exploring relationships among workloads, computational resources, and scheduling decisions.'
   }

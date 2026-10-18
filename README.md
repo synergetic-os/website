@@ -106,6 +106,13 @@ All theme variables are centrally configured in `:root` inside `styles.css`:
 
 ---
 
+## 🤝 Collaboration & Project Ownership
+
+Organisations, research institutions, academic labs, open-source foundations, and software engineers interested in collaborating, sponsoring development, or discussing taking ownership of the Synergetics Operating System open-source project are invited to reach out directly via email:
+
+- **Project Email**: [synergeticsoperatingsystem@gmail.com](mailto:synergeticsoperatingsystem@gmail.com?subject=Collaboration%20%26%20Project%20Ownership%20Inquiry%20-%20Synergetics%20OS)
+
+---
 ## 🌐 Deploying to GitHub Pages
 
 1. Push this repository to GitHub:
