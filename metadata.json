@@ -2,5 +2,7 @@
   "name": "Synergetics Operating System (SOS)",
   "description": "Official research, architecture, prototype, and founder website for the Synergetics Operating System (SOS) initiated by Solomon Yaw Adeklo.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

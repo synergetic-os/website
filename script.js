@@ -215,16 +215,35 @@ function initArchitectureDiagram() {
    ========================================================================== */
 const CONCEPT_IMAGES = [
   {
-    src: 'assets/concept-01-desktop.jpg',
+    src: './gui.png',
     title: 'Concept 01 — Synergetic Desktop Environment',
     caption: 'An exploration of how geometric organization and resource awareness might inform a future desktop experience.'
   },
   {
-    src: 'assets/concept-02-monitor.jpg',
+    src: './gui2.png',
     title: 'Concept 02 — Adaptive Resource and Topology Monitor',
     caption: 'A proposed interface for exploring relationships among workloads, computational resources, and scheduling decisions.'
   }
 ];
+
+function getConceptData(index) {
+  const cards = document.querySelectorAll('.concept-image-card');
+  if (cards.length > 0) {
+    const safeIndex = ((index % cards.length) + cards.length) % cards.length;
+    const card = cards[safeIndex];
+    const img = card.querySelector('.concept-img');
+    const heading = card.querySelector('.concept-card-heading');
+    const desc = card.querySelector('.concept-card-desc');
+    if (img) {
+      return {
+        src: img.getAttribute('src') || img.src,
+        title: heading ? heading.textContent.trim() : (safeIndex === 0 ? 'Concept 01 — Synergetic Desktop Environment' : 'Concept 02 — Adaptive Resource and Topology Monitor'),
+        caption: desc ? desc.textContent.trim() : ''
+      };
+    }
+  }
+  return CONCEPT_IMAGES[index] || CONCEPT_IMAGES[0];
+}
 
 function initLightboxModal() {
   const modal = document.getElementById('lightbox-modal');
@@ -241,15 +260,17 @@ function initLightboxModal() {
   let lastActiveElement = null;
 
   function showImage(index) {
-    if (index < 0) index = CONCEPT_IMAGES.length - 1;
-    if (index >= CONCEPT_IMAGES.length) index = 0;
+    const cards = document.querySelectorAll('.concept-image-card');
+    const total = cards.length > 0 ? cards.length : CONCEPT_IMAGES.length;
+    if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
     currentIndex = index;
 
-    const data = CONCEPT_IMAGES[currentIndex];
+    const data = getConceptData(currentIndex);
     imgEl.src = data.src;
     imgEl.alt = data.title;
     if (captionEl) {
-      captionEl.textContent = `${data.title} — ${data.caption}`;
+      captionEl.textContent = data.caption ? `${data.title} — ${data.caption}` : data.title;
     }
   }
 
@@ -269,10 +290,16 @@ function initLightboxModal() {
     if (lastActiveElement) lastActiveElement.focus();
   }
 
-  triggers.forEach((trigger, idx) => {
+  triggers.forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      const customIndex = parseInt(trigger.getAttribute('data-index') || idx, 10);
+      const card = trigger.closest('.concept-image-card');
+      let customIndex = parseInt(trigger.getAttribute('data-index'), 10);
+      if (isNaN(customIndex) && card) {
+        const cards = Array.from(document.querySelectorAll('.concept-image-card'));
+        customIndex = cards.indexOf(card);
+      }
+      if (isNaN(customIndex)) customIndex = 0;
       openModal(customIndex);
     });
   });

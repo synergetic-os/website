@@ -2,7 +2,7 @@
 
 This repository contains the official research, architecture, prototype, and founder website for the **Synergetics Operating System (SOS)** — an experimental open-source operating system initiative founded by **Solomon Yaw Adeklo**.
 
-The project investigates whether topology-based models, geometric relationships inspired by Buckminster Fuller's Synergetics, and adaptive resource management can inform a relationship-aware approach to operating-system architecture and process scheduling.
+The project originated when Solomon conceptualized the idea of a topology-based operating system as an undergraduate student at **Valley View University** in Ghana while studying the core Operating Systems course. The project investigates whether topology-based models, geometric relationships inspired by Buckminster Fuller's Synergetics, and adaptive resource management can inform a relationship-aware approach to operating-system architecture and process scheduling.
 
 ---
 
@@ -13,6 +13,7 @@ The project investigates whether topology-based models, geometric relationships 
 - **Rust Scheduler Simulation**: [https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs](https://github.com/synergetic-os/Simulation/blob/main/synergetic_scheduler_rust_simulation.rs)
 - **Research Publication (ResearchGate)**: [SYNERGETIC OPERATING SYSTEM (SOS): A Topology-Based Emergent and Resource-Field Operating System Architecture](https://www.researchgate.net/publication/408462085_SYNERGETIC_OPERATING_SYSTEM_SOS_A_Topology-Based_Emergent_and_Resource-Field_Operating_System_Architecture)
 - **Comprehensive Systems Documentation**: [A comprehensive systems documentation of Synergetics operating system](https://www.researchgate.net/publication/408461895_A_comprehensive_systems_documentation_of_Synergetics_operating_system)
+- **Synergetics OS LinkedIn Page**: [https://linkedin.com/company/synergetics-operating-system](https://linkedin.com/company/synergetics-operating-system)
 - **Founder Portfolio**: [https://www.solomonadeklo.com/](https://www.solomonadeklo.com/)
 - **Founder GitHub**: [https://github.com/solomonyaw](https://github.com/solomonyaw)
 - **Founder LinkedIn**: [https://www.linkedin.com/in/solomon-adeklo-1501453bb/](https://www.linkedin.com/in/solomon-adeklo-1501453bb/)
@@ -106,6 +107,13 @@ All theme variables are centrally configured in `:root` inside `styles.css`:
 
 ---
 
+## 🤝 Collaboration & Project Ownership
+
+Organisations, research institutions, academic labs, open-source foundations, and software engineers interested in collaborating, sponsoring development, or discussing taking ownership of the Synergetics Operating System open-source project are invited to reach out directly via email:
+
+- **Project Email**: [synergeticsoperatingsystem@gmail.com](mailto:synergeticsoperatingsystem@gmail.com?subject=Collaboration%20%26%20Project%20Ownership%20Inquiry%20-%20Synergetics%20OS)
+
+---
 ## 🌐 Deploying to GitHub Pages
 
 1. Push this repository to GitHub:
